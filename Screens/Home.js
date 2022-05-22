@@ -11,10 +11,10 @@ import {
   Pressable,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import "react-native-gesture-handler";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { useNavigation } from "@react-navigation/native";
-import React from "react";
+import React, { useEffect } from "react";
+import { NativeEventEmitter, NativeModules } from "react-native";
 
 import imagebg from "../assets/blurry-gradient.png";
 import loclogo from "../assets/loclogo.png";
@@ -23,6 +23,13 @@ import Header from "./Header";
 import Footer from "./Footer";
 
 const Home = () => {
+  // const { AlanManager, AlanEventEmitter } = NativeModules;
+  // const alanEventEmitter = new NativeEventEmitter(AlanEventEmitter);
+  // const subscription = alanEventEmitter.addListener("command", (data) => {
+  //   console.log(`got command event ${JSON.stringify(data)}`);
+  // });
+  // const alanKey =
+  //   "3aac396be1e4ff54f2c877a96794f5f22e956eca572e1d8b807a3e2338fdd0dc/stage";
   const windowHeight = useWindowDimensions().height;
   const navigation = useNavigation();
   return (
@@ -30,6 +37,7 @@ const Home = () => {
       <ImageBackground source={imagebg} style={styles.imgbg}>
         <View style={styles.container}>
           <Header navigation={navigation} />
+          <Text style={styles.maintext}>Search. Click. Move.</Text>
           <KeyboardAvoidingView style={styles.maincontainer}>
             <View style={styles.locationcont2}>
               <View style={styles.loclogocont}>
@@ -58,6 +66,7 @@ const Home = () => {
               </Pressable>
             </View>
           </KeyboardAvoidingView>
+          {/* <AlanView projectid={alanKey} /> */}
           <Footer navigation={navigation} />
         </View>
       </ImageBackground>
@@ -81,6 +90,7 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     borderRadius: 10,
     elevation: 30,
+    marginBottom: "35%",
   },
   locationcont3: {
     height: "100%",
@@ -142,6 +152,12 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     borderTopLeftRadius: 10,
     resizeMode: "contain",
+  },
+  maintext: {
+    fontSize: 30,
+    fontWeight: "400",
+    fontStyle: "italic",
+    marginBottom: "25%",
   },
 });
 

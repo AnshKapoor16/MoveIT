@@ -2,6 +2,16 @@
 # yarn lockfile v1
 
 
+"@alan-ai/alan-sdk-react-native@^1.14.0":
+  version "1.14.0"
+  resolved "https://registry.yarnpkg.com/@alan-ai/alan-sdk-react-native/-/alan-sdk-react-native-1.14.0.tgz#b7ba180682e9c22710ac2e99432daf44b862f4d5"
+  integrity sha512-0KZ417c6moGanjhJwSdX8wR/SKQC7LrQPJNBVd0zpuSOjT/tjWnIkmgQv1PgaB0E7IFN7xkTIhg8dFXcBS+XRA==
+
+"@alan-ai/alan-sdk-web@^1.8.32":
+  version "1.8.32"
+  resolved "https://registry.yarnpkg.com/@alan-ai/alan-sdk-web/-/alan-sdk-web-1.8.32.tgz#3d6a5b2a2a78a7a92b2a3ea1ae007652e6405946"
+  integrity sha512-7WesVGhUirS9IOMrTKUHZfTMe/9wPHoDOvRku72bTDsPuV35xFkjW9Rw8hJ8QgTCJKdwFj7koKRg53sJH2+dkQ==
+
 "@ampproject/remapping@^2.1.0":
   version "2.2.0"
   resolved "https://registry.npmjs.org/@ampproject/remapping/-/remapping-2.2.0.tgz"

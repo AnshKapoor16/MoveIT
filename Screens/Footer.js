@@ -63,7 +63,7 @@ const Footer = (props) => {
           radius: 50,
           foreground: false,
         }}
-        onPress={() => props.navigation.navigate("Home")}
+        onPress={() => props.navigation.navigate("Chat")}
       >
         <Image source={accountlogo} style={styles.accountlogo} />
       </Pressable>
